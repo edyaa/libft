@@ -11,5 +11,5 @@ void	*ft_memchr(const void *arr, int c, size_t n)
 			return ((char*)arr_tmp + i);
 		i++;
 	}
-	return (NULL);
+	return ((void*)0);
 }

@@ -10,7 +10,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	src_tmp = src;
 
 	if (!dest_tmp | !src_tmp)
-		return (NULL);
+		return ((void*)0);
 	
 	while (++i < n)
 		tmp[i] = src_tmp[i];
