@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 16:18:03 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/17 16:18:09 by kblaze           ###   ########.fr       */
+/*   Created: 2020/11/17 15:37:26 by kblaze            #+#    #+#             */
+/*   Updated: 2020/11/17 16:11:54 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(char c)
+char	*strnstr(const char *big, const char *little, size_t len)
 {
-	if ((c <= 122 && c >= 97) || (c <= 90 && c >= 65))
-		return (1024);
-	return (0);
+	const char	*local_big;
+	const char	*local_little;
+	int			i;
+	char		tmp[len];
+	int			j;
+
+	i = -1;
+	local_big = big;
+	local_little = little;
+	if (local_big == (void*)0 || local_little == (void*)0)
+		return ((void*)0);
 }
