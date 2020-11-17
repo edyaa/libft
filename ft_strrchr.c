@@ -8,7 +8,7 @@ char	*ft_strrchr(const char *str, int ch)
 	src = str;
 
 	if (!src)
-		return (NULL);
+		return ((void*)0);
 	
 	while (src[i])
 	{
@@ -18,6 +18,6 @@ char	*ft_strrchr(const char *str, int ch)
 	}
 	
 	if (!tmp)
-		return (NULL);
+		return ((void*)0);
 	return (tmp);
 }
