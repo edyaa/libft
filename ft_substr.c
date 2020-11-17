@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 16:09:35 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/17 17:40:45 by kblaze           ###   ########.fr       */
+/*   Created: 2020/11/17 17:05:36 by kblaze            #+#    #+#             */
+/*   Updated: 2020/11/17 17:53:59 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str)
+#include <stdlib.h>
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int i;
+	char	*string;
+	int		i;
 
 	i = 0;
-	while (str[i])
+	if (!s)
+		return ((void*)0);
+	string = (char *)malloc(sizeof(char) * (len + 1));
+	if (string == (void*)0)
+		return (0);
+	while (i < len)
+	{
+		string[i] = s[start];
 		i++;
-	return (i);
+		start++;
+	}
+	string[i] = '\0';
+	return (string);
 }
