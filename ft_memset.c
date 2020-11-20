@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *array, int c, int n)
+#include "libft.h"
+
+void	*ft_memset(void *array, int c, size_t n)
 {
-	int		i;
-	char	*tmp;
+    size_t  i;
+	char    *tmp;
 
 	tmp = array;
 	i = 0;

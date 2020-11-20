@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+#include "libft.h"
+
+char	ft_toupper(int c)
 {
 	if (c <= 122 && c >= 97)
 		return (c - 32);

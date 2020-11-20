@@ -6,11 +6,11 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:01:46 by kblaze            #+#    #+#             */
-/*   Updated: 2020/08/04 11:46:20 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/20 10:44:14 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int j;
 	int result;

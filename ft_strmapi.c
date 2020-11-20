@@ -10,22 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
+	int     i;
+	char    *map;
 
-	i = -1;
-	while (++i < ft_strlen(s))
-		f(i, s[i]);
-	return (s);
+	if (!s || !f)
+	    return ((void*)0);
+    map = (char*)malloc(sizeof(char) * ((int)ft_strlen(s) + 1));
+    if (!map)
+        return ((void*)0);
+
+	i = 0;
+	while (i < (int)ft_strlen(s))
+	{
+	    map[i] = f((unsigned int)i, s[i]);
+	    i++;
+	}
+	map[i] = '\0';
+	return (map);
 }

@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *array, const void *source, int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *array, const void *source, size_t n)
 {
 	char		*tmp;
 	const char	*source_tmp;
-	int			i;
+    size_t      i;
 
 	i = 0;
 	tmp = array;

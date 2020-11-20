@@ -6,22 +6,24 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:16:52 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/17 17:02:57 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/20 11:23:16 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *array, int n)
+#include "libft.h"
+
+void	ft_bzero(void *array, size_t n)
 {
 	char	*tmp;
-	int		i;
+	size_t	i;
 
 	tmp = array;
-	if (tmp == (void*)0)
-		return ((void*)0);
+	if (!tmp)
+		return ;
 	i = 0;
 	while (i < n)
 	{
-		tmp[i] = '\0';
+		tmp[i] = 0;
 		i++;
 	}
 }
