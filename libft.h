@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 10:38:06 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 11:28:41 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/20 16:47:18 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 # include <stdio.h>
 # include <ctype.h>
 # include <string.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *array, size_t n);
-size_t  ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int ch);
 void	*ft_calloc(size_t num, size_t size);
 int		ft_isalnum(int c);
@@ -36,10 +37,10 @@ int		ft_memcmp(const void *arr1, const void *arr2, size_t n);
 void	*ft_memcpy(void *array, const void *source, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *array, int c, size_t n);
-void    ft_putchar_fd(char c, int fd);
-void    ft_putendl_fd(char *s, int fd);
-void    ft_putnbr_fd(int n, int fd);
-void    ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -50,6 +51,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	ft_toupper(int c);
 char	ft_tolower(int c);
-size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif

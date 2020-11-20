@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 16:16:35 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 16:52:15 by kblaze           ###   ########.fr       */
+/*   Created: 2020/11/20 16:13:56 by kblaze            #+#    #+#             */
+/*   Updated: 2020/11/20 16:18:29 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *array, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*tmp;
+	int		len;
+	char	arr[15];
 
-	tmp = array;
-	i = 0;
-	while (i < n)
+	len = 0;
+	if (n == 0)
+		ft_putchar_fd('0', fd);
+	if (n == -2147483648)
 	{
-		tmp[i] = c;
-		i++;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
 	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-');
+		n *= -1;
+	}
+	while (n > 0)
+	{
+		arr[len++] = n % 10 + '0';
+		n /= 10;
+	}
+	while (--len >= 0)
+		ft_putchar_fd(arr[len], fd);
 }

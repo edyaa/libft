@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:13:11 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/17 16:13:21 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/20 16:52:40 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *array, const void *source, size_t n)
 {
 	char		*tmp;
 	const char	*source_tmp;
-    size_t      i;
+	size_t		i;
 
 	i = 0;
 	tmp = array;
