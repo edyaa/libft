@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 10:38:06 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/21 16:31:44 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 17:35:59 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+char	*ft_itoa(int n);
 
 #endif
