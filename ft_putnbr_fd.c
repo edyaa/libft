@@ -6,9 +6,11 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:13:56 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 16:18:29 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:18:49 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -26,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		ft_putchar_fd('-');
+		ft_putchar_fd('-', fd);
 		n *= -1;
 	}
 	while (n > 0)

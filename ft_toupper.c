@@ -6,13 +6,13 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:16:06 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/17 16:16:24 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:38:26 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int c)
+int		ft_toupper(int c)
 {
 	if (c <= 122 && c >= 97)
 		return (c - 32);

@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:16:52 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 11:23:16 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:47:03 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	ft_bzero(void *array, size_t n)
 {
-	char	*tmp;
-	size_t	i;
+	unsigned char	*tmp;
+	size_t			i;
 
-	tmp = array;
-	if (!tmp)
-		return ;
+	tmp = (unsigned char*)array;
 	i = 0;
 	while (i < n)
 	{

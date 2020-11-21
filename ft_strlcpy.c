@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 14:51:28 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 16:53:07 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:16:39 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dstsize > i + 1)
 		dst[i] = '\0';
 	else
-		dst[size - 1] = '\0';
+		dst[dstsize - 1] = '\0';
 	return (i);
 }

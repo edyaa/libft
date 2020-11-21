@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 16:13:11 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 16:52:40 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:21:46 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 void	*ft_memcpy(void *array, const void *source, size_t n)
 {
-	char		*tmp;
-	const char	*source_tmp;
+	char		*dest;
+	const char	*src;
 	size_t		i;
 
+	if (array == source)
+		return (array);
 	i = 0;
-	tmp = array;
-	source_tmp = source;
+	dest = array;
+	src = source;
 	while (i < n)
 	{
-		tmp[i] = source_tmp[i];
+		dest[i] = src[i];
 		i++;
 	}
+	return (dest);
 }

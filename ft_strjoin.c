@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:21:43 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 16:48:28 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:25:39 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (tmp == (void*)0)
 		return ((void*)0);
 	i = 0;
-	while (i < ft_strlen(s1))
+	while (i < (int)ft_strlen(s1))
 	{
 		tmp[i] = s1[i];
 		i++;

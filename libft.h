@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 10:38:06 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/20 16:47:18 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/21 13:37:54 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ char	*strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int ch);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	ft_toupper(int c);
-char	ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif
