@@ -6,20 +6,20 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 18:13:23 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/21 15:15:21 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/22 17:52:05 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		sign(int i, int j)
+static	int		sign(int i, int j)
 {
 	if (j - i < 0)
 		return (-1);
 	return (1);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;

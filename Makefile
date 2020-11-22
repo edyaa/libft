@@ -6,7 +6,7 @@
 #    By: kblaze <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/21 13:00:47 by kblaze            #+#    #+#              #
-#    Updated: 2020/11/22 13:29:10 by kblaze           ###   ########.fr        #
+#    Updated: 2020/11/22 16:11:17 by kblaze           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = ft_atoi.c ft_isprint.c ft_putchar_fd.c ft_strlcat.c \
 	  ft_memcmp.c ft_putstr_fd.c ft_strmapi.c ft_toupper.c \
 	  ft_isalpha.c ft_memcpy.c ft_strchr.c ft_strncmp.c \
 	  ft_isascii.c ft_memmove.c ft_strdup.c  ft_itoa.c ft_strnstr.c\
-	  ft_isdigit.c ft_memset.c ft_strjoin.c ft_strrchr.c
+	  ft_isdigit.c ft_memset.c ft_strjoin.c ft_strrchr.c ft_split.c
 
 OBJ = $(SRC:.c=.o)
 

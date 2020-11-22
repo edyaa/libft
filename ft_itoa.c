@@ -6,13 +6,13 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 17:32:19 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/21 17:42:25 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/22 17:46:38 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nn(int n)
+static	int			ft_nn(int n)
 {
 	int		nn;
 
@@ -32,7 +32,7 @@ int		ft_nn(int n)
 	return (nn);
 }
 
-int		check_last_int(char *str, int n)
+static	int			check_last_int(char *str, int n)
 {
 	if (n == -2147483648)
 	{
@@ -43,7 +43,7 @@ int		check_last_int(char *str, int n)
 	return (n);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	int		nn;
 	char	*str;
