@@ -6,7 +6,7 @@
 /*   By: kblaze <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 14:00:56 by kblaze            #+#    #+#             */
-/*   Updated: 2020/11/22 17:47:33 by kblaze           ###   ########.fr       */
+/*   Updated: 2020/11/24 17:11:06 by kblaze           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 static	int			ft_count_sep(char const *s, char c)
 {
-	int		i;
 	int		count;
 
-	i = 0;
 	count = 0;
 	while (*s)
 	{
@@ -31,16 +29,16 @@ static	int			ft_count_sep(char const *s, char c)
 	return (count);
 }
 
-static	int			ft_part_len(char const *s, char c)
+static	int			ft_part_len(char const **s, char c)
 {
-	int		i;
-	int		count;
+	int		len;
 
-	count = 0;
-	i = -1;
-	while (s[++i] != c)
-		count++;
-	return (count);
+	len = 0;
+	while (**s && **s == c)
+		(*s)++;
+	while ((*s)[len] && (*s)[len] != c)
+		len++;
+	return (len);
 }
 
 static	char		**ft_free(char **tab)
@@ -59,29 +57,27 @@ static	char		**ft_free(char **tab)
 
 char				**ft_split(char const *s, char c)
 {
-	char			**sep_arr;
-	unsigned int	count_sep;
-	unsigned int	part_len;
-	unsigned int	i;
+	char	**sep_arr;
+	int		count_sep;
+	int		part_len;
+	int		i;
 
 	if (!s)
 		return ((void*)0);
-	count_sep = (unsigned int)ft_count_sep(s, c);
+	count_sep = (int)ft_count_sep(s, c);
 	sep_arr = (char**)malloc(sizeof(*sep_arr) * (count_sep + 1));
 	if (!sep_arr)
 		return ((void*)0);
 	i = 0;
 	while (i < count_sep)
 	{
-		while (*s == c)
-			s++;
-		part_len = ft_part_len(s, c);
+		part_len = ft_part_len(&s, c);
 		if (!(sep_arr[i] = (char*)malloc(sizeof(char) * (part_len + 1))))
 			return (ft_free(sep_arr));
 		ft_strlcpy(sep_arr[i], s, part_len + 1);
-		s = (char*)s + part_len;
+		s = s + part_len + 1;
 		i++;
 	}
-	sep_arr[i] = NULL;
+	sep_arr[i] = ((void*)0);
 	return (sep_arr);
 }
