@@ -15,10 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-# include <ctype.h>
-# include <string.h>
-# include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *array, size_t n);
